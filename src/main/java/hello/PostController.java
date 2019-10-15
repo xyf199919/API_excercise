@@ -37,6 +37,7 @@ public class PostController {
     		FileOutputStream fout = new FileOutputStream(convertFile);
     		fout.write(file.getBytes());
     		fout.close();
+    		posts.add(file.getOriginalFilename());
     		return new ResponseEntity<>("File has uploaded successfully", HttpStatus.OK);
     	} else if (str != null) {
     		posts.add(str);
@@ -45,24 +46,11 @@ public class PostController {
     		return new ResponseEntity<>("nothing to upload", HttpStatus.OK);
     	}
 	}
-
-    
-//
-//    @RequestMapping("/greeting")
-//    public Post greeting(@RequestParam(value="name", defaultValue="World") String name) {
-//        return new Post(counter.incrementAndGet(),
-//                            String.format(template, name));
-//    }
      
     @RequestMapping("/")
     public List<String> getAllPosts() {
     	return posts;
     }
-//    
-//    @RequestMapping(method=RequestMethod.POST, value="/posts")
-//    public void addPost(@RequestBody Post post) {
-//    	posts.add(post);
-//    }
     
     
     
