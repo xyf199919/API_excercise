@@ -16,3 +16,7 @@ GET http://localhost:8080/  ---get all posts (texts and filenames)
 POST http://localhost:8080/ ---uploads file or text
 
 Post method consumes MediaType.MULTIPART_FORM_DATA_VALUE with two optional parameters file and post
+
+
+How to Dockerizing this application:
+https://www.callicoder.com/spring-boot-docker-example/
