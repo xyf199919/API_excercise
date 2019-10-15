@@ -10,6 +10,9 @@ or use ./mvnw spring-boot:run to run service directly
 
 How to use this webservice:
 
-GET http://localhost:8080/  ---get all posts
+GET http://localhost:8080/  ---get all posts (texts and filenames)
+
+
 POST http://localhost:8080/ ---uploads file or text
 
+Post method consumes MediaType.MULTIPART_FORM_DATA_VALUE with two optional parameters file and post
